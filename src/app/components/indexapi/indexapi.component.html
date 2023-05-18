@@ -1,1 +1,47 @@
-<p>indexapi works!</p>
+
+
+<body>
+    <div class="index-container">
+        <p>Test Index</p>
+        <button (click)="getDataFromAPI()">Get Data</button>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    
+                    <th scope="col">id</th>
+                    <th scope="col">title</th>
+                    <th scope="col">body</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor= "let d of data">
+                    <th scope="row">{{d.id }}</th>
+                    
+                    <td>{{d.title}}</td>
+                    <td>{{d.body}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <!-- <ul *ngFor= "let d of data">
+            <li>{{d.id}}</li>
+            <li>{{d.title}}</li>
+            <li>{{d.body}}</li>
+        </ul> -->
+        <div class="d-flex justify-content-between p-2">
+            <ngb-pagination
+                [collectionSize]="collectionSize"
+                [(page)]="page"
+                [pageSize]="pageSize"
+                (pageChange)="refreshdata()">
+            
+            </ngb-pagination>
+            <!-- <select class="from-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshdata()">
+                <option [ngValue]="2">2 items per page</option>
+		        <option [ngValue]="4">4 items per page</option>
+		        <option [ngValue]="6">6 items per page</option>
+            </select>  -->
+        </div>
+    </div>
+    
+</body>

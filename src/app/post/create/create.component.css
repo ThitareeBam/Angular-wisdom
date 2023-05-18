@@ -1,0 +1,22 @@
+.container {
+    margin-top: 5px;
+}
+.card {
+    top:193px;
+    width:100%;
+    height:200px;
+    background-color:rgba(235, 206, 19, 0.985);
+}
+.h2 {
+    text-align: center;
+}
+.h3 {
+    text-align: center;
+}
+.texth2 {
+    padding-top: 50px;
+    text-align: center;
+}
+.texth3 {
+    text-align: center;
+}

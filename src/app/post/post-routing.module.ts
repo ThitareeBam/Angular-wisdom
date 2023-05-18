@@ -4,8 +4,14 @@ import { IndexComponent } from './index/index.component';
 import { ViewComponent } from './view/view.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
+import { HeaderComponent } from '../components/header/header.component';
+import { AboutComponent } from '../components/about/about.component' ;
+import { ContactComponent } from '../components/contact/contact.component';
+
 
 const routes: Routes = [
+  {path: '',component: AboutComponent},
+  {path: 'contact',component: ContactComponent},
   {path: 'post', redirectTo: 'post/index',pathMatch: 'full'},
   {path: 'post/index',component: IndexComponent},
   {path: 'post/:postId/view',component: ViewComponent},
